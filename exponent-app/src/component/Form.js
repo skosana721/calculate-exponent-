@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 function Form() {
   const [inputNumber, setInputNumber] = useState({ base: "", exponent: "" });
+  const [answer, setAnswer] = useState("");
   const { base, exponent } = inputNumber;
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -12,6 +13,16 @@ function Form() {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (base && exponent) {
+      setAnswer(calculateExponent(base, exponent));
+      setInputNumber({
+        base: "",
+        exponent: "",
+      });
+    }
+  };
+  const calculateExponent = (b, expo) => {
+    return expo === 0 ? 1 : b * calculateExponent(b, expo - 1);
   };
   return (
     <div>
@@ -27,6 +38,7 @@ function Form() {
         />
         <button type="submit">Calculate</button>
       </form>
+      {answer}
     </div>
   );
 }
