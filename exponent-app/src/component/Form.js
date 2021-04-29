@@ -10,7 +10,7 @@ function Form() {
       [name]: value,
     });
   };
-  console.log(base, exponent);
+
   return (
     <div>
       <form>
