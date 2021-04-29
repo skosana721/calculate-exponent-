@@ -28,17 +28,26 @@ function Form() {
     <div>
       <form onSubmit={handleSubmit}>
         <label htmlFor="base">Base</label>
-        <input onChange={handleChange} type="number" name="base" value={base} />
+        <input
+          onChange={handleChange}
+          type="number"
+          name="base"
+          value={base}
+          placeholder="Enter base"
+          required
+        />
         <label htmlFor="exponent">Exponent</label>
         <input
           onChange={handleChange}
           type="number"
           name="exponent"
           value={exponent}
+          placeholder="Enter exponent"
+          required
         />
         <button type="submit">Calculate</button>
       </form>
-      {answer}
+      <h2>Anwser is {answer}</h2>
     </div>
   );
 }
