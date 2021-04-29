@@ -47,7 +47,7 @@ function Form() {
         />
         <button type="submit">Calculate</button>
       </form>
-      <h2>Anwser is {answer}</h2>
+      {answer && <h2>Answer is {answer}</h2>}
     </div>
   );
 }
