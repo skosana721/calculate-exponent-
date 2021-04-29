@@ -4,9 +4,9 @@ function Form() {
   return (
     <div>
       <form>
-        <label htmlFor="base"></label>
+        <label htmlFor="base">Base</label>
         <input type="number" name="base" />
-        <label htmlFor="exponent"></label>
+        <label htmlFor="exponent">Exponent</label>
         <input type="number" name="exponent" />
         <button type="submit">Calculate</button>
       </form>
