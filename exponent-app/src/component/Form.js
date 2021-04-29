@@ -10,10 +10,12 @@ function Form() {
       [name]: value,
     });
   };
-
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
   return (
     <div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label htmlFor="base">Base</label>
         <input onChange={handleChange} type="number" name="base" value={base} />
         <label htmlFor="exponent">Exponent</label>
